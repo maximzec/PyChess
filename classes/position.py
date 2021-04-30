@@ -27,6 +27,9 @@ class Position(object):
     def __str__(self):
         return self.row_dict[self.x + 1] + str(self.y + 1)
 
+    def __eq__(self, position: Position):
+        return self.x == position.x and self.y == position.y
+
 
 pos = Position(-1, 0)
 print(pos)
